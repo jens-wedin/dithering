@@ -1,0 +1,154 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  position: relative;
+}
+
+.sidebar {
+  width: 300px;
+  background: #000;
+  border-right: 2px solid var(--border-color);
+  padding: 20px;
+  transition: width 0.3s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar.closed {
+  width: 60px;
+  padding: 10px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar.closed h2 {
+  display: none;
+}
+
+.control-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.control-group label {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.control-group input[type="range"] {
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.control-group input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--accent-color);
+  height: 2px;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  background: var(--text-color);
+  margin-top: -6px;
+  border-radius: 0;
+  border: 1px solid #000;
+}
+
+.control-group select,
+.control-group input[type="color"] {
+  background: #000;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 8px;
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+.action-btn {
+  background: var(--text-color);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.action-btn:hover {
+  background: #fff;
+  box-shadow: 0 0 10px var(--text-color);
+}
+
+.toggle-btn {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050505;
+  padding: 40px;
+  position: relative;
+}
+
+.upload-area {
+  border: 2px dashed var(--border-color);
+  padding: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.canvas-wrapper {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  background: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.reset-btn {
+  background: #ff0000;
+  color: white;
+}
