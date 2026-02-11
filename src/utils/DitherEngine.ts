@@ -136,11 +136,9 @@ export class DitherEngine {
                 const gray = (data[i] + data[i + 1] + data[i + 2]) / 3;
 
                 const bayerVal = bayerMatrix4x4[y % 4][x % 4];
-                const normalizedBayer = (bayerVal / 16) * 255;
 
                 // Adjust gray based on bayer matrix
                 const step = 255 / (settings.levels - 1);
-                const factor = (gray % step) / step;
 
                 let newGray;
                 if (gray > (Math.floor(gray / step) * step + (bayerVal / 16) * step)) {

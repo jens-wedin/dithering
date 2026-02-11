@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { DitherEngine, hexToRgb } from './utils/DitherEngine';
 import type { DitherSettings, DitherAlgorithm } from './utils/DitherEngine';
 import './App.css';
